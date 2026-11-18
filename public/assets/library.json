@@ -1562,6 +1562,24 @@
    "id": "jsfloral",
    "name": "Floral basket solitaire",
    "cuts": [
+    "round",
+    "marquise"
+   ],
+   "collection": "JS Jewelry"
+  },
+  {
+   "id": "jsbezel",
+   "name": "Bezel solitaire",
+   "cuts": [
+    "round",
+    "cushion"
+   ],
+   "collection": "JS Jewelry"
+  },
+  {
+   "id": "jssixprong",
+   "name": "Six-prong solitaire",
+   "cuts": [
     "round"
    ],
    "collection": "JS Jewelry"
