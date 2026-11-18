@@ -64,7 +64,8 @@ class FloorBaker:
                     dict(
                         own=own,
                         area=area,
-                        shots=max(90000, round(area * 72000)),
+                        # One dispatch is capped at 65535 work groups of 128 threads.
+                        shots=min(65535 * 128, max(90000, round(area * 72000))),
                         faceCount=len(planes),
                         triangleCount=len(edges),
                     ),

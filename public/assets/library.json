@@ -1559,6 +1559,14 @@
  ],
  "settings": [
   {
+   "id": "jsfloral",
+   "name": "JS Floral Basket",
+   "cuts": [
+    "round"
+   ],
+   "collection": "JS Jewelry"
+  },
+  {
    "id": "solitaire",
    "name": "Solitaire"
   },

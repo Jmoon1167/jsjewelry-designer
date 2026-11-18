@@ -117,6 +117,11 @@ function paint() {
     document.querySelectorAll("[data-profile]"),
     (b) => b.dataset.profile === s.profile,
   );
+  const style = lib.settings.find((st) => st.id === s.setting);
+  for (const b of document.querySelectorAll("#cut-grid [data-cut]"))
+    b.hidden = !!style?.cuts && !style.cuts.includes(b.dataset.cut);
+  for (const row of document.querySelectorAll(".profile-row"))
+    row.hidden = !!style?.collection;
   if (!loadingDesign && studio.fit) updateEstimate(studio);
   $("stone-family").textContent = gem.family;
   $("stone-name").textContent = gem.name;
@@ -233,6 +238,9 @@ function gemList() {
 }
 let loadingDesign = false;
 async function design(setting, cut) {
+  // JS Jewelry designs are made for specific center shapes.
+  const only = lib.settings.find((st) => st.id === setting)?.cuts;
+  if (only && !only.includes(cut)) cut = only[0];
   loadingDesign = true;
   loadingEstimate();
   const token = ++request;
@@ -605,6 +613,8 @@ try {
   bind();
   loadingEstimate();
   paint();
+  const only = lib.settings.find((st) => st.id === studio.state.setting)?.cuts;
+  if (only && !only.includes(studio.state.cut)) studio.state.cut = only[0];
   await Promise.all([
     studio.setLight(studio.state.rig),
     studio.setDesign(studio.state.setting, studio.state.cut),
