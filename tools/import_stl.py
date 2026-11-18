@@ -45,6 +45,7 @@ def main():
     ap.add_argument("--radius", type=float, required=True)
     ap.add_argument("--offset-x", type=float, default=0)
     ap.add_argument("--head-base", type=float, required=True)
+    ap.add_argument("--center-z", type=float, default=0.0)
     ap.add_argument("--designer", default="/home/claude/jsjewelry-designer")
     a = ap.parse_args()
     root = Path(a.designer) / "public" / "assets"
@@ -60,7 +61,23 @@ def main():
         mesh.invert()
     assert len(mesh.vertices) < 65535, "decimate first"
     pos = mesh.vertices.astype(np.float32)
-    nrm = mesh.vertex_normals.astype(np.float32)
+    # Same convention as three.js computeVertexNormals (area-weighted), with a
+    # fallback where opposing faces cancel so no vertex has a zero normal.
+    tri = mesh.vertices[mesh.faces]
+    cross = np.cross(tri[:, 1] - tri[:, 0], tri[:, 2] - tri[:, 0])
+    acc = np.zeros_like(mesh.vertices)
+    for k in range(3):
+        np.add.at(acc, mesh.faces[:, k], cross)
+    length = np.linalg.norm(acc, axis=1)
+    weak = length < 1e-6
+    if weak.any():
+        unit = cross / np.maximum(np.linalg.norm(cross, axis=1, keepdims=True), 1e-12)
+        fallback = np.zeros_like(acc)
+        for k in range(3):
+            fallback[mesh.faces[:, k]] = unit
+        acc[weak] = fallback[weak]
+        length = np.linalg.norm(acc, axis=1)
+    nrm = (acc / length[:, None]).astype(np.float32)
     idx = mesh.faces.astype(np.uint16).ravel()
 
     # Reference center stone of the requested cut from a stock solitaire.
@@ -76,8 +93,8 @@ def main():
 
     # Carat field: the head scales about the girdle center, the shank stays.
     # Like the stock settings, the whole head scales about its base point.
-    g = np.array([0, a.girdle_y, 0], np.float32)
-    base = np.array([0, a.head_base, 0], np.float32)
+    g = np.array([0, a.girdle_y, a.center_z], np.float32)
+    base = np.array([0, a.head_base, a.center_z], np.float32)
     w = smoothstep(a.head_base - 2.5, a.head_base + 0.5, pos[:, 1])[:, None]
     d = w * (pos - base)
     field = np.clip(np.round(d * 1000), -32767, 32767).astype(np.int16)
