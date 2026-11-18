@@ -1,0 +1,1635 @@
+{
+ "colorModel": "Direction-averaged D65 transmission over 4 mm, swatches over 8 mm; reference-size settings",
+ "cuts": [
+  {
+   "id": "round",
+   "name": "Round brilliant"
+  },
+  {
+   "id": "emerald",
+   "name": "Emerald"
+  },
+  {
+   "id": "oval",
+   "name": "Oval"
+  },
+  {
+   "id": "princess",
+   "name": "Princess"
+  },
+  {
+   "id": "pear",
+   "name": "Pear"
+  },
+  {
+   "id": "cushion",
+   "name": "Cushion"
+  },
+  {
+   "id": "asscher",
+   "name": "Asscher"
+  },
+  {
+   "id": "marquise",
+   "name": "Marquise"
+  },
+  {
+   "id": "radiant",
+   "name": "Radiant"
+  },
+  {
+   "id": "baguette",
+   "name": "Baguette"
+  },
+  {
+   "id": "trillion",
+   "name": "Trillion"
+  },
+  {
+   "id": "rose",
+   "name": "Rose"
+  },
+  {
+   "id": "old-mine",
+   "name": "Old mine"
+  },
+  {
+   "id": "old-european",
+   "name": "Old European"
+  },
+  {
+   "id": "hexagon",
+   "name": "Hexagon step"
+  },
+  {
+   "id": "kite",
+   "name": "Kite step"
+  },
+  {
+   "id": "portuguese",
+   "name": "Portuguese"
+  },
+  {
+   "id": "checkerboard",
+   "name": "Checkerboard"
+  }
+ ],
+ "gems": [
+  {
+   "absorption": [
+    -0.0,
+    -0.0,
+    -0.0
+   ],
+   "color": "#ffffff",
+   "density": 3.52,
+   "dispersion": 0.044,
+   "family": "Diamond",
+   "id": "lab-diamond",
+   "ior": 2.4170001,
+   "name": "Lab-grown diamond",
+   "opticalDensity": [
+    [
+     -0.0,
+     -0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     -0.0
+    ]
+   ],
+   "typicalCut": "round"
+  },
+  {
+   "absorption": [
+    0.0003831,
+    0.0012792,
+    0.0060739
+   ],
+   "color": "#fffefa",
+   "density": 3.52,
+   "dispersion": 0.044,
+   "family": "Diamond",
+   "id": "natural-diamond",
+   "ior": 2.4170001,
+   "name": "Natural diamond",
+   "opticalDensity": [
+    [
+     0.0003829,
+     0.0012776,
+     0.006073
+    ],
+    [
+     0.0015323,
+     0.0051168,
+     0.0242958
+    ],
+    [
+     0.0045727,
+     0.0154139,
+     0.0729188
+    ],
+    [
+     0.0113207,
+     0.0388668,
+     0.1825107
+    ]
+   ],
+   "typicalCut": "round"
+  },
+  {
+   "absorption": [
+    -0.0,
+    -0.0,
+    -0.0
+   ],
+   "color": "#ffffff",
+   "density": 3.22,
+   "dispersion": 0.104,
+   "family": "Moissanite",
+   "id": "moissanite",
+   "ior": 2.648,
+   "name": "Moissanite",
+   "opticalDensity": [
+    [
+     -0.0,
+     -0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     -0.0
+    ]
+   ],
+   "typicalCut": "round"
+  },
+  {
+   "absorption": [
+    0.0219625,
+    0.0801358,
+    0.3679399
+   ],
+   "color": "#eabf31",
+   "density": 3.52,
+   "dispersion": 0.044,
+   "family": "Fancy color diamond",
+   "id": "cape-yellow-diamond",
+   "ior": 2.4170001,
+   "name": "Yellow diamond",
+   "opticalDensity": [
+    [
+     0.0217749,
+     0.0764855,
+     0.3557312
+    ],
+    [
+     0.08785,
+     0.3205431,
+     1.4717598
+    ],
+    [
+     0.3095984,
+     0.993899,
+     18.420681
+    ],
+    [
+     0.9416344,
+     2.4615252,
+     18.420681
+    ]
+   ],
+   "typicalCut": "cushion"
+  },
+  {
+   "absorption": [
+    0.0281555,
+    0.1171689,
+    0.4966286
+   ],
+   "color": "#e2a800",
+   "density": 3.52,
+   "dispersion": 0.044,
+   "family": "Fancy color diamond",
+   "id": "canary-diamond",
+   "ior": 2.4170001,
+   "name": "Canary diamond",
+   "opticalDensity": [
+    [
+     0.024836,
+     0.1135276,
+     0.4634486
+    ],
+    [
+     0.1126221,
+     0.4686755,
+     1.9865146
+    ],
+    [
+     0.4565109,
+     1.3938123,
+     18.420681
+    ],
+    [
+     1.423383,
+     3.2617538,
+     18.420681
+    ]
+   ],
+   "typicalCut": "radiant"
+  },
+  {
+   "absorption": [
+    0.0563832,
+    0.1531457,
+    0.0159784
+   ],
+   "color": "#d391f0",
+   "density": 3.52,
+   "dispersion": 0.044,
+   "family": "Fancy color diamond",
+   "id": "pink-diamond",
+   "ior": 2.4170001,
+   "name": "Pink diamond",
+   "opticalDensity": [
+    [
+     0.0581179,
+     0.1508031,
+     0.0147094
+    ],
+    [
+     0.225533,
+     0.6125827,
+     0.0639137
+    ],
+    [
+     0.6223215,
+     2.0081596,
+     0.2129528
+    ],
+    [
+     1.289706,
+     18.420681,
+     0.5457346
+    ]
+   ],
+   "typicalCut": "oval"
+  },
+  {
+   "absorption": [
+    0.0920313,
+    0.0444397,
+    0.0194903
+   ],
+   "color": "#b7daee",
+   "density": 3.52,
+   "dispersion": 0.044,
+   "family": "Fancy color diamond",
+   "id": "blue-diamond",
+   "ior": 2.4170001,
+   "name": "Blue diamond",
+   "opticalDensity": [
+    [
+     0.0912968,
+     0.0443545,
+     0.0193174
+    ],
+    [
+     0.3681252,
+     0.1777587,
+     0.0779611
+    ],
+    [
+     1.1381396,
+     0.535364,
+     0.238477
+    ],
+    [
+     3.3881221,
+     1.345989,
+     0.6134511
+    ]
+   ],
+   "typicalCut": "princess"
+  },
+  {
+   "absorption": [
+    0.0497026,
+    0.0113092,
+    0.0406929
+   ],
+   "color": "#d6f5dd",
+   "density": 3.52,
+   "dispersion": 0.044,
+   "family": "Fancy color diamond",
+   "id": "green-diamond",
+   "ior": 2.4170001,
+   "name": "Green diamond",
+   "opticalDensity": [
+    [
+     0.0501777,
+     0.010961,
+     0.0411292
+    ],
+    [
+     0.1988104,
+     0.0452369,
+     0.1627718
+    ],
+    [
+     0.5855543,
+     0.1443778,
+     0.4757234
+    ],
+    [
+     1.4503721,
+     0.3905127,
+     1.1321987
+    ]
+   ],
+   "typicalCut": "cushion"
+  },
+  {
+   "absorption": [
+    0.0490708,
+    0.0768871,
+    0.127129
+   ],
+   "color": "#d6c2a2",
+   "density": 3.52,
+   "dispersion": 0.044,
+   "family": "Fancy color diamond",
+   "id": "champagne-diamond",
+   "ior": 2.4170001,
+   "name": "Champagne diamond",
+   "opticalDensity": [
+    [
+     0.0488256,
+     0.0767084,
+     0.1268734
+    ],
+    [
+     0.1962831,
+     0.3075485,
+     0.5085162
+    ],
+    [
+     0.5970902,
+     0.9269118,
+     1.5380812
+    ],
+    [
+     1.5342702,
+     2.3295109,
+     4.0317869
+    ]
+   ],
+   "typicalCut": "round"
+  },
+  {
+   "absorption": [
+    0.7456614,
+    0.2713993,
+    0.097443
+   ],
+   "color": "#0060b6",
+   "density": 4.0,
+   "dispersion": 0.018,
+   "family": "Corundum",
+   "id": "blue-sapphire",
+   "ior": 1.77,
+   "name": "Blue sapphire",
+   "opticalDensity": [
+    [
+     0.5806268,
+     0.2760556,
+     0.0977811
+    ],
+    [
+     2.9826455,
+     1.085597,
+     0.389772
+    ],
+    [
+     18.420681,
+     3.2620146,
+     1.0849279
+    ],
+    [
+     4.7795324,
+     18.420681,
+     2.215817
+    ]
+   ],
+   "typicalCut": "oval-mixed"
+  },
+  {
+   "absorption": [
+    0.1130883,
+    0.2482481,
+    0.2305591
+   ],
+   "color": "#b36774",
+   "density": 4.0,
+   "dispersion": 0.018,
+   "family": "Corundum",
+   "id": "pink-sapphire",
+   "ior": 1.77,
+   "name": "Pink sapphire",
+   "opticalDensity": [
+    [
+     0.1259352,
+     0.2491858,
+     0.2411817
+    ],
+    [
+     0.4523532,
+     0.9929923,
+     0.9222363
+    ],
+    [
+     1.0696471,
+     3.0677142,
+     2.5135329
+    ],
+    [
+     1.8983222,
+     18.420681,
+     5.7889123
+    ]
+   ],
+   "typicalCut": "cushion-mixed"
+  },
+  {
+   "absorption": [
+    0.0041396,
+    0.005945,
+    0.1674137
+   ],
+   "color": "#fdf88c",
+   "density": 4.0,
+   "dispersion": 0.018,
+   "family": "Corundum",
+   "id": "yellow-sapphire",
+   "ior": 1.77,
+   "name": "Yellow sapphire",
+   "opticalDensity": [
+    [
+     0.0059637,
+     0.0034922,
+     0.168263
+    ],
+    [
+     0.0165584,
+     0.0237802,
+     0.6696548
+    ],
+    [
+     0.0218104,
+     0.1131088,
+     2.0548604
+    ],
+    [
+     0.0298513,
+     0.3516737,
+     18.420681
+    ]
+   ],
+   "typicalCut": "cushion-mixed"
+  },
+  {
+   "absorption": [
+    0.0005,
+    0.0005,
+    0.0005001
+   ],
+   "color": "#ffffff",
+   "density": 4.0,
+   "dispersion": 0.018,
+   "family": "Corundum",
+   "id": "white-sapphire",
+   "ior": 1.77,
+   "name": "White sapphire",
+   "opticalDensity": [
+    [
+     0.0005,
+     0.0005001,
+     0.0005001
+    ],
+    [
+     0.0019998,
+     0.0020002,
+     0.0020004
+    ],
+    [
+     0.006,
+     0.0059999,
+     0.0059998
+    ],
+    [
+     0.0149994,
+     0.0150002,
+     0.015
+    ]
+   ],
+   "typicalCut": "oval"
+  },
+  {
+   "absorption": [
+    0.2547059,
+    0.7120418,
+    0.5499055
+   ],
+   "color": "#7d0023",
+   "density": 4.0,
+   "dispersion": 0.018,
+   "family": "Corundum",
+   "id": "ruby",
+   "ior": 1.77,
+   "name": "Ruby",
+   "opticalDensity": [
+    [
+     0.3299209,
+     0.702555,
+     0.6016881
+    ],
+    [
+     1.0188236,
+     2.8481672,
+     2.1996222
+    ],
+    [
+     1.9961153,
+     18.420681,
+     6.0816965
+    ],
+    [
+     3.064055,
+     18.420681,
+     18.420681
+    ]
+   ],
+   "typicalCut": "oval"
+  },
+  {
+   "absorption": [
+    0.2547059,
+    0.7120418,
+    0.5499055
+   ],
+   "color": "#7d0023",
+   "density": 4.0,
+   "dispersion": 0.018,
+   "family": "Corundum",
+   "id": "flux-ruby",
+   "ior": 1.77,
+   "name": "Lab-created ruby",
+   "opticalDensity": [
+    [
+     0.3299209,
+     0.702555,
+     0.6016881
+    ],
+    [
+     1.0188236,
+     2.8481672,
+     2.1996222
+    ],
+    [
+     1.9961153,
+     18.420681,
+     6.0816965
+    ],
+    [
+     3.064055,
+     18.420681,
+     18.420681
+    ]
+   ],
+   "typicalCut": "cushion"
+  },
+  {
+   "absorption": [
+    4.6051702,
+    0.1546632,
+    0.325228
+   ],
+   "color": "#009a58",
+   "density": 2.72,
+   "dispersion": 0.014,
+   "family": "Beryl",
+   "id": "emerald",
+   "ior": 1.5829999,
+   "name": "Emerald",
+   "opticalDensity": [
+    [
+     0.744136,
+     0.1669741,
+     0.3499086
+    ],
+    [
+     18.420681,
+     0.6186528,
+     1.3009121
+    ],
+    [
+     18.420681,
+     1.5921597,
+     3.1357071
+    ],
+    [
+     18.420681,
+     3.3169615,
+     5.4734583
+    ]
+   ],
+   "typicalCut": "emerald"
+  },
+  {
+   "absorption": [
+    4.6051702,
+    0.1514918,
+    0.323016
+   ],
+   "color": "#009b59",
+   "density": 2.72,
+   "dispersion": 0.014,
+   "family": "Beryl",
+   "id": "hydrothermal-emerald",
+   "ior": 1.5829999,
+   "name": "Lab-created emerald",
+   "opticalDensity": [
+    [
+     0.7340232,
+     0.1636718,
+     0.3477629
+    ],
+    [
+     18.420681,
+     0.6059672,
+     1.2920641
+    ],
+    [
+     18.420681,
+     1.5559713,
+     3.1074378
+    ],
+    [
+     18.420681,
+     3.2291372,
+     5.3976054
+    ]
+   ],
+   "typicalCut": "emerald"
+  },
+  {
+   "absorption": [
+    0.0538104,
+    0.0179513,
+    0.022474
+   ],
+   "color": "#d2efec",
+   "density": 2.72,
+   "dispersion": 0.014,
+   "family": "Beryl",
+   "id": "aquamarine",
+   "ior": 1.5829999,
+   "name": "Aquamarine",
+   "opticalDensity": [
+    [
+     0.0534813,
+     0.0178659,
+     0.0227168
+    ],
+    [
+     0.2152416,
+     0.0718053,
+     0.089896
+    ],
+    [
+     0.660324,
+     0.2175943,
+     0.2623294
+    ],
+    [
+     1.8227794,
+     0.5511211,
+     0.6197567
+    ]
+   ],
+   "typicalCut": "emerald"
+  },
+  {
+   "absorption": [
+    0.0146519,
+    0.0555946,
+    0.0259206
+   ],
+   "color": "#f2d1e9",
+   "density": 2.8,
+   "dispersion": 0.014,
+   "family": "Beryl",
+   "id": "morganite",
+   "ior": 1.59,
+   "name": "Morganite",
+   "opticalDensity": [
+    [
+     0.0143899,
+     0.0554584,
+     0.0258683
+    ],
+    [
+     0.0586078,
+     0.2223784,
+     0.1036825
+    ],
+    [
+     0.1823558,
+     0.6725324,
+     0.3124939
+    ],
+    [
+     0.475051,
+     1.7329366,
+     0.7869298
+    ]
+   ],
+   "typicalCut": "cushion"
+  },
+  {
+   "absorption": [
+    0.3665416,
+    0.4637651,
+    0.0379591
+   ],
+   "color": "#5700dc",
+   "density": 3.3499999,
+   "dispersion": 0.021,
+   "family": "Zoisite",
+   "id": "tanzanite",
+   "ior": 1.691,
+   "name": "Tanzanite",
+   "opticalDensity": [
+    [
+     0.4056668,
+     0.4414749,
+     0.0271706
+    ],
+    [
+     1.4661664,
+     1.8550602,
+     0.1518366
+    ],
+    [
+     2.719173,
+     18.420681,
+     0.5165858
+    ],
+    [
+     3.2538903,
+     18.420681,
+     1.1543593
+    ]
+   ],
+   "typicalCut": "cushion-mixed"
+  },
+  {
+   "absorption": [
+    0.5723003,
+    0.2766716,
+    0.0213597
+   ],
+   "color": "#005ce8",
+   "density": 3.5599999,
+   "dispersion": 0.014,
+   "family": "Topaz",
+   "id": "london-blue-topaz",
+   "ior": 1.609,
+   "name": "London blue topaz",
+   "opticalDensity": [
+    [
+     0.4975697,
+     0.2814902,
+     0.0122353
+    ],
+    [
+     2.2892013,
+     1.1066862,
+     0.0854388
+    ],
+    [
+     18.420681,
+     3.6759908,
+     0.3551638
+    ],
+    [
+     3.7608507,
+     18.420681,
+     0.9442164
+    ]
+   ],
+   "typicalCut": "cushion"
+  },
+  {
+   "absorption": [
+    0.1709351,
+    0.0774404,
+    0.0036938
+   ],
+   "color": "#84c2fb",
+   "density": 3.5599999,
+   "dispersion": 0.014,
+   "family": "Topaz",
+   "id": "sky-blue-topaz",
+   "ior": 1.609,
+   "name": "Sky blue topaz",
+   "opticalDensity": [
+    [
+     0.164686,
+     0.0780461,
+     0.0024832
+    ],
+    [
+     0.6837403,
+     0.3097618,
+     0.0147753
+    ],
+    [
+     2.5030141,
+     0.9136226,
+     0.0703071
+    ],
+    [
+     18.420681,
+     2.2819018,
+     0.2403669
+    ]
+   ],
+   "typicalCut": "oval"
+  },
+  {
+   "absorption": [
+    0.0007998,
+    0.0008001,
+    0.0008001
+   ],
+   "color": "#fefefe",
+   "density": 3.5599999,
+   "dispersion": 0.014,
+   "family": "Topaz",
+   "id": "white-topaz",
+   "ior": 1.609,
+   "name": "White topaz",
+   "opticalDensity": [
+    [
+     0.0007989,
+     0.0008004,
+     0.0008
+    ],
+    [
+     0.0031991,
+     0.0032006,
+     0.0032003
+    ],
+    [
+     0.0096,
+     0.0095996,
+     0.0096004
+    ],
+    [
+     0.0239992,
+     0.0240002,
+     0.0240003
+    ]
+   ],
+   "typicalCut": "round"
+  },
+  {
+   "absorption": [
+    0.0105484,
+    0.0873822,
+    0.2040502
+   ],
+   "color": "#f5ba7b",
+   "density": 3.53,
+   "dispersion": 0.014,
+   "family": "Topaz",
+   "id": "imperial-topaz",
+   "ior": 1.6289999,
+   "name": "Imperial topaz",
+   "opticalDensity": [
+    [
+     0.010312,
+     0.0854934,
+     0.2065558
+    ],
+    [
+     0.0421934,
+     0.349529,
+     0.8162006
+    ],
+    [
+     0.1577413,
+     1.0827112,
+     2.4635305
+    ],
+    [
+     0.5179722,
+     2.8665006,
+     18.420681
+    ]
+   ],
+   "typicalCut": "pear"
+  },
+  {
+   "absorption": [
+    0.1040185,
+    0.2866834,
+    0.0772941
+   ],
+   "color": "#b251c2",
+   "density": 2.6500001,
+   "dispersion": 0.013,
+   "family": "Quartz",
+   "id": "amethyst",
+   "ior": 1.544,
+   "name": "Amethyst",
+   "opticalDensity": [
+    [
+     0.1056709,
+     0.2781379,
+     0.0759851
+    ],
+    [
+     0.4160739,
+     1.1467336,
+     0.3091762
+    ],
+    [
+     1.1662345,
+     5.5869274,
+     0.9315645
+    ],
+    [
+     2.4158206,
+     18.420681,
+     2.2196617
+    ]
+   ],
+   "typicalCut": "oval"
+  },
+  {
+   "absorption": [
+    0.0014773,
+    0.0248831,
+    0.1835161
+   ],
+   "color": "#ffe884",
+   "density": 2.6500001,
+   "dispersion": 0.013,
+   "family": "Quartz",
+   "id": "citrine",
+   "ior": 1.544,
+   "name": "Citrine",
+   "opticalDensity": [
+    [
+     0.0036391,
+     0.0221518,
+     0.1858352
+    ],
+    [
+     0.0059093,
+     0.0995323,
+     0.7340645
+    ],
+    [
+     0.0029522,
+     0.3369427,
+     2.2847006
+    ],
+    [
+     0.0614472,
+     0.8729794,
+     18.420681
+    ]
+   ],
+   "typicalCut": "checkerboard"
+  },
+  {
+   "absorption": [
+    0.0774864,
+    0.121126,
+    0.2370451
+   ],
+   "color": "#c1a56b",
+   "density": 2.6500001,
+   "dispersion": 0.013,
+   "family": "Quartz",
+   "id": "smoky-quartz",
+   "ior": 1.544,
+   "name": "Smoky quartz",
+   "opticalDensity": [
+    [
+     0.0773168,
+     0.120099,
+     0.2361842
+    ],
+    [
+     0.3099456,
+     0.4845041,
+     0.9481804
+    ],
+    [
+     0.9477208,
+     1.4704385,
+     2.9386547
+    ],
+    [
+     2.4685514,
+     3.6900346,
+     18.420681
+    ]
+   ],
+   "typicalCut": "emerald"
+  },
+  {
+   "absorption": [
+    0.0715303,
+    0.0391266,
+    0.1486066
+   ],
+   "color": "#c6de96",
+   "density": 3.3399999,
+   "dispersion": 0.02,
+   "family": "Olivine",
+   "id": "peridot",
+   "ior": 1.654,
+   "name": "Peridot",
+   "opticalDensity": [
+    [
+     0.0715068,
+     0.0392027,
+     0.1489642
+    ],
+    [
+     0.2861212,
+     0.1565062,
+     0.5944264
+    ],
+    [
+     0.8621511,
+     0.4665039,
+     1.8050507
+    ],
+    [
+     2.2123754,
+     1.1538304,
+     18.420681
+    ]
+   ],
+   "typicalCut": "oval"
+  },
+  {
+   "absorption": [
+    0.1284253,
+    0.4986342,
+    0.2137074
+   ],
+   "color": "#a30d75",
+   "density": 3.8399999,
+   "dispersion": 0.026,
+   "family": "Garnet",
+   "id": "rhodolite",
+   "ior": 1.76,
+   "name": "Rhodolite garnet",
+   "opticalDensity": [
+    [
+     0.1234104,
+     0.4803485,
+     0.2108461
+    ],
+    [
+     0.5137011,
+     1.994537,
+     0.8548294
+    ],
+    [
+     1.4486768,
+     18.420681,
+     2.6006904
+    ],
+    [
+     2.8830621,
+     18.420681,
+     6.7685056
+    ]
+   ],
+   "typicalCut": "oval"
+  },
+  {
+   "absorption": [
+    4.6051702,
+    0.1876967,
+    0.3912061
+   ],
+   "color": "#008745",
+   "density": 3.6099999,
+   "dispersion": 0.028,
+   "family": "Garnet",
+   "id": "tsavorite",
+   "ior": 1.74,
+   "name": "Tsavorite garnet",
+   "opticalDensity": [
+    [
+     0.6525663,
+     0.1975385,
+     0.4177183
+    ],
+    [
+     18.420681,
+     0.7507869,
+     1.5648243
+    ],
+    [
+     18.420681,
+     2.0045588,
+     3.8019822
+    ],
+    [
+     18.420681,
+     4.3230119,
+     6.7198734
+    ]
+   ],
+   "typicalCut": "cushion"
+  },
+  {
+   "absorption": [
+    0.2818612,
+    1.0461079,
+    0.9955644
+   ],
+   "color": "#620000",
+   "density": 4.0500002,
+   "dispersion": 0.024,
+   "family": "Garnet",
+   "id": "almandine",
+   "ior": 1.79,
+   "name": "Almandine garnet",
+   "opticalDensity": [
+    [
+     0.2748663,
+     0.9411567,
+     0.9666935
+    ],
+    [
+     1.1274449,
+     4.1844316,
+     3.9822576
+    ],
+    [
+     2.8983619,
+     18.420681,
+     18.420681
+    ],
+    [
+     5.3373108,
+     18.420681,
+     18.420681
+    ]
+   ],
+   "typicalCut": "oval"
+  },
+  {
+   "absorption": [
+    0.0989554,
+    0.6048512,
+    0.4638494
+   ],
+   "color": "#b5002c",
+   "density": 3.5999999,
+   "dispersion": 0.02,
+   "family": "Spinel",
+   "id": "red-spinel",
+   "ior": 1.7180001,
+   "name": "Red spinel",
+   "opticalDensity": [
+    [
+     0.0854391,
+     0.5810913,
+     0.4802959
+    ],
+    [
+     0.3958215,
+     2.4194047,
+     1.8553975
+    ],
+    [
+     1.0844069,
+     18.420681,
+     6.0102921
+    ],
+    [
+     1.958015,
+     18.420681,
+     18.420681
+    ]
+   ],
+   "typicalCut": "cushion"
+  },
+  {
+   "absorption": [
+    0.0324878,
+    0.2295925,
+    0.0688116
+   ],
+   "color": "#e16cc7",
+   "density": 3.5999999,
+   "dispersion": 0.02,
+   "family": "Spinel",
+   "id": "pink-spinel",
+   "ior": 1.7180001,
+   "name": "Pink spinel",
+   "opticalDensity": [
+    [
+     0.0272515,
+     0.2269993,
+     0.0671754
+    ],
+    [
+     0.1299511,
+     0.9183701,
+     0.2752464
+    ],
+    [
+     0.4468297,
+     3.1038404,
+     0.8503351
+    ],
+    [
+     1.0388899,
+     18.420681,
+     2.1381192
+    ]
+   ],
+   "typicalCut": "oval"
+  },
+  {
+   "absorption": [
+    0.0422069,
+    0.4187364,
+    0.2851586
+   ],
+   "color": "#cf2c5a",
+   "density": 3.0599999,
+   "dispersion": 0.017,
+   "family": "Tourmaline",
+   "id": "rubellite",
+   "ior": 1.6440001,
+   "name": "Rubellite tourmaline",
+   "opticalDensity": [
+    [
+     0.0051315,
+     0.4148344,
+     0.2869578
+    ],
+    [
+     0.1688275,
+     1.6749455,
+     1.1406344
+    ],
+    [
+     0.7622501,
+     18.420681,
+     3.4397149
+    ],
+    [
+     1.6847939,
+     18.420681,
+     18.420681
+    ]
+   ],
+   "typicalCut": "oval"
+  },
+  {
+   "absorption": [
+    0.1610825,
+    0.0772666,
+    0.1925824
+   ],
+   "color": "#90c082",
+   "density": 3.0599999,
+   "dispersion": 0.017,
+   "family": "Tourmaline",
+   "id": "green-tourmaline",
+   "ior": 1.6440001,
+   "name": "Green tourmaline",
+   "opticalDensity": [
+    [
+     0.162926,
+     0.0745768,
+     0.1973448
+    ],
+    [
+     0.64433,
+     0.3090662,
+     0.7703296
+    ],
+    [
+     1.9094685,
+     0.9738029,
+     2.2043347
+    ],
+    [
+     5.2349453,
+     2.5221941,
+     5.3735714
+    ]
+   ],
+   "typicalCut": "emerald"
+  },
+  {
+   "absorption": [
+    0.4461083,
+    0.1786586,
+    0.0422649
+   ],
+   "color": "#0087d9",
+   "density": 3.0599999,
+   "dispersion": 0.017,
+   "family": "Tourmaline",
+   "id": "indicolite",
+   "ior": 1.6440001,
+   "name": "Indicolite tourmaline",
+   "opticalDensity": [
+    [
+     0.4001171,
+     0.1793929,
+     0.0383919
+    ],
+    [
+     1.784433,
+     0.7146346,
+     0.1690597
+    ],
+    [
+     18.420681,
+     2.1408811,
+     0.5662419
+    ],
+    [
+     6.2740536,
+     18.420681,
+     1.4909117
+    ]
+   ],
+   "typicalCut": "emerald"
+  },
+  {
+   "absorption": [
+    0.2675211,
+    0.0912968,
+    0.0057366
+   ],
+   "color": "#4cb9f8",
+   "density": 4.6999998,
+   "dispersion": 0.038,
+   "family": "Zircon",
+   "id": "blue-zircon",
+   "ior": 1.925,
+   "name": "Blue zircon",
+   "opticalDensity": [
+    [
+     0.2507861,
+     0.0916059,
+     0.0038085
+    ],
+    [
+     1.0700846,
+     0.3651872,
+     0.0229463
+    ],
+    [
+     18.420681,
+     1.0796398,
+     0.1055127
+    ],
+    [
+     18.420681,
+     2.7320673,
+     0.3400553
+    ]
+   ],
+   "typicalCut": "round"
+  }
+ ],
+ "metals": [
+  {
+   "color": "#fff2d8",
+   "density": 11.6,
+   "id": "yellow-gold-10k",
+   "name": "10K yellow gold",
+   "reflectance": [
+    0.99,
+    0.88,
+    0.67
+   ]
+  },
+  {
+   "color": "#e8e5e2",
+   "density": 11.6,
+   "id": "white-gold-10k",
+   "name": "10K white gold",
+   "reflectance": [
+    0.7969271,
+    0.7645994,
+    0.742391
+   ]
+  },
+  {
+   "color": "#ffe2cb",
+   "density": 11.6,
+   "id": "rose-gold-10k",
+   "name": "10K rose gold",
+   "reflectance": [
+    0.98,
+    0.76,
+    0.57
+   ]
+  },
+  {
+   "color": "#ffeecb",
+   "density": 13.1000004,
+   "id": "yellow-gold-14k",
+   "name": "14K yellow gold",
+   "reflectance": [
+    0.9974219,
+    0.8576077,
+    0.5943562
+   ]
+  },
+  {
+   "color": "#e8e4e1",
+   "density": 13.0,
+   "id": "white-gold-14k",
+   "name": "14K white gold",
+   "reflectance": [
+    0.7969271,
+    0.7645994,
+    0.742391
+   ]
+  },
+  {
+   "color": "#ffdcbf",
+   "density": 13.0,
+   "id": "rose-gold-14k",
+   "name": "14K rose gold",
+   "reflectance": [
+    0.99,
+    0.72,
+    0.51
+   ]
+  },
+  {
+   "color": "#ffe4b8",
+   "density": 15.5,
+   "id": "yellow-gold",
+   "name": "18K yellow gold",
+   "reflectance": [
+    1.0,
+    0.7782208,
+    0.4772003
+   ]
+  },
+  {
+   "color": "#e7e3e0",
+   "density": 15.6000004,
+   "id": "white-gold",
+   "name": "18K white gold",
+   "reflectance": [
+    0.7969271,
+    0.7645994,
+    0.742391
+   ]
+  },
+  {
+   "color": "#ffd9b2",
+   "density": 15.1000004,
+   "id": "rose-gold",
+   "name": "18K rose gold",
+   "reflectance": [
+    1.0,
+    0.6962244,
+    0.4444517
+   ]
+  },
+  {
+   "color": "#d7d1c9",
+   "density": 20.7000008,
+   "id": "platinum",
+   "name": "Platinum",
+   "reflectance": [
+    0.6788428,
+    0.6395748,
+    0.5835674
+   ]
+  }
+ ],
+ "settings": [
+  {
+   "id": "solitaire",
+   "name": "Solitaire"
+  },
+  {
+   "id": "trilogy",
+   "name": "Three-stone"
+  },
+  {
+   "id": "pave",
+   "name": "Pav\u00e9"
+  },
+  {
+   "id": "cathedral",
+   "name": "Cathedral"
+  },
+  {
+   "id": "split",
+   "name": "Split shank"
+  },
+  {
+   "id": "eastwest",
+   "name": "East\u2013west"
+  },
+  {
+   "id": "knife",
+   "name": "Knife edge"
+  },
+  {
+   "id": "dome",
+   "name": "Domed band"
+  },
+  {
+   "id": "cluster",
+   "name": "Pav\u00e9 trilogy"
+  },
+  {
+   "id": "cable",
+   "name": "Cable twist"
+  },
+  {
+   "id": "ribbon",
+   "name": "Twisted ribbon"
+  },
+  {
+   "id": "wishbone",
+   "name": "Wishbone"
+  },
+  {
+   "id": "bypass",
+   "name": "Bypass"
+  },
+  {
+   "id": "interlace",
+   "name": "Interlace"
+  },
+  {
+   "id": "double",
+   "name": "Double rail"
+  },
+  {
+   "id": "marquise",
+   "name": "Marquise lattice"
+  },
+  {
+   "id": "fluted",
+   "name": "Fluted band"
+  },
+  {
+   "id": "petal",
+   "name": "Petal basket"
+  }
+ ],
+ "sizeUS": 6
+}

@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.wrangler/
+__pycache__/
+
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+.DS_Store
+public/assets/floors/*-key.png
+public/tracking-runtime/

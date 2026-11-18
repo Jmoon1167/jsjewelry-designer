@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#e6e3da" />
+    <meta
+      name="description"
+      content="Design your engagement ring with JS Jewelry. Choose the setting, center stone, cut and metal, see it sparkle in 3D and try it on with your camera."
+    />
+    <link rel="icon" href="/assets/brand/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500;600&display=swap" />
+    <title>Ring Designer · JS Jewelry</title>
+  </head>
+  <body>
+    <canvas
+      id="stage"
+      aria-label="Interactive jewelry stage. Tap a stone or the band to edit. Drag to orbit, scroll or pinch to zoom."
+    ></canvas>
+    <header class="brand">
+      <a href="https://jsjewelry.online/" aria-label="JS Jewelry home">
+        <span class="brand-mark" aria-hidden="true"></span>
+      </a>
+      <div class="brand-title">
+        <h1>JS Jewelry</h1>
+        <a class="github-star" href="https://jsjewelry.online/"
+          >Ring Designer · Back to jsjewelry.online</a
+        >
+      </div>
+    </header>
+    <details id="estimate">
+      <summary>
+        <span>Starting at</span>
+        <strong id="estimate-reels" aria-hidden="true"></strong>
+        <span class="sr-price" id="estimate-live" aria-live="polite"></span>
+      </summary>
+      <div class="estimate-body">
+        <dl>
+          <dt>Estimated range</dt>
+          <dd id="price-range"></dd>
+          <dt>Metal</dt>
+          <dd id="price-metal"></dd>
+          <dt>Center</dt>
+          <dd id="price-center"></dd>
+          <dt id="price-accents-label">Side stones</dt>
+          <dd id="price-accents"></dd>
+        </dl>
+        <p id="price-note"></p>
+        <small
+          >Estimate for this design in USD. Your final price is confirmed with
+          your CAD design. The $200 CAD deposit is credited in full toward your
+          ring.</small
+        >
+        <a id="quote-link" class="quote-btn" href="https://jsjewelry.online/about/#consult"
+          >Request this ring</a
+        >
+      </div>
+    </details>
+    <div class="top-actions">
+      <button
+        id="light-toggle"
+        aria-expanded="false"
+        aria-controls="light-panel"
+      >
+        <i data-icon="sun"></i><span id="light-title">Studio softbox</span
+        ><i data-icon="down"></i></button
+      ><button
+        id="lens-toggle"
+        title="Camera and depth of field"
+        aria-label="Camera and depth of field"
+        aria-expanded="false"
+        aria-controls="lens-panel"
+      >
+        <i data-icon="aperture"></i>
+      </button>
+      <button
+        id="try-on"
+        disabled
+        aria-label="Try this ring on with your camera"
+      >
+        <i data-icon="camera"></i><span>Try on</span>
+      </button>
+    </div>
+    <aside id="design" class="card design">
+      <div class="card-head">
+        <h2>Ring design</h2>
+        <button
+          class="bare"
+          id="fold-design"
+          title="Collapse design panel"
+          aria-expanded="true"
+          aria-controls="design-body"
+        >
+          <i data-icon="minus"></i>
+        </button>
+      </div>
+      <div id="design-body">
+        <div class="section">
+          <div class="caption">Setting</div>
+          <button
+            id="styles-open"
+            class="library-btn"
+            aria-controls="styles"
+            aria-expanded="false"
+          >
+            <img id="style-preview" alt="" width="56" height="40" /><b
+              id="style-name"
+              >Three-stone</b
+            ><i data-icon="grid"></i>
+          </button>
+        </div>
+        <div class="profile-row">
+          <span class="caption">Profile</span>
+          <div class="segmented" role="group" aria-label="Setting thickness">
+            <button data-profile="fine" aria-pressed="false">Fine</button>
+            <button data-profile="classic" aria-pressed="true">Classic</button>
+            <button data-profile="bold" aria-pressed="false">Bold</button>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-label">
+            <span class="caption">Gemstones</span>
+            <div
+              id="stone-target"
+              class="segmented"
+              role="group"
+              aria-label="Stone to edit"
+            >
+              <button data-target="center" aria-pressed="true">Center</button>
+              <button data-target="accent" aria-pressed="false">Accents</button>
+            </div>
+          </div>
+          <button
+            class="library-btn"
+            id="library-open"
+            aria-controls="library"
+            aria-expanded="false"
+          >
+            <span class="facet-chip" id="chip"></span
+            ><span
+              ><b id="stone-name">Lab-grown diamond</b
+              ><small id="stone-family">Diamond</small></span
+            ><i data-icon="grid"></i>
+          </button>
+        </div>
+        <div class="section">
+          <span class="caption">Center cut</span>
+          <button
+            class="library-btn"
+            id="cuts-open"
+            aria-expanded="false"
+            aria-controls="cuts"
+          >
+            <img id="cut-preview" alt="" width="42" height="36" /><b
+              id="cut-name"
+              >Emerald</b
+            ><i data-icon="grid"></i>
+          </button>
+          <label class="slider-label" for="carat"
+            >Center weight
+            <output for="carat" id="carat-v">2.00 ct</output></label
+          >
+          <input
+            type="range"
+            id="carat"
+            min=".5"
+            max="3"
+            step=".05"
+            value="2"
+          />
+        </div>
+        <div class="section last">
+          <span class="caption">Metal</span>
+          <div id="metals" class="swatches"></div>
+          <span id="metal-name">14K yellow gold</span>
+        </div>
+      </div>
+    </aside>
+    <aside id="styles" class="card flyout library styles" hidden>
+      <div class="card-head">
+        <h2>Ring styles</h2>
+        <button class="bare" data-close="styles" aria-label="Close ring styles">
+          <i data-icon="close"></i>
+        </button>
+      </div>
+      <div
+        class="setting-grid"
+        id="settings"
+        role="group"
+        aria-label="Ring styles"
+      ></div>
+    </aside>
+    <aside id="cuts" class="card flyout library styles" hidden>
+      <div class="card-head">
+        <h2>Center cuts</h2>
+        <button class="bare" data-close="cuts" aria-label="Close center cuts">
+          <i data-icon="close"></i>
+        </button>
+      </div>
+      <button id="cut-gem" class="library-btn" hidden>
+        Change gemstone <i data-icon="diamond"></i>
+      </button>
+      <div
+        class="setting-grid cut-grid"
+        id="cut-grid"
+        role="group"
+        aria-label="Center cuts"
+      ></div>
+    </aside>
+    <aside id="library" class="card flyout library" hidden>
+      <div class="card-head">
+        <h2 id="gem-heading">Gem library</h2>
+        <button
+          class="bare"
+          data-close="library"
+          aria-label="Close gem library"
+        >
+          <i data-icon="close"></i>
+        </button>
+      </div>
+      <div
+        id="quick-gems"
+        role="group"
+        aria-label="Quick gemstone colors"
+      ></div>
+      <div class="search">
+        <i data-icon="search"></i
+        ><input
+          id="gem-search"
+          type="search"
+          placeholder="Search stones or families"
+          aria-label="Search stones or families"
+        />
+      </div>
+      <div id="gem-list" role="group" aria-label="Gemstones"></div>
+      <div class="list-count" id="gem-count"></div>
+    </aside>
+    <span id="part-mark" hidden aria-hidden="true"></span>
+    <aside id="setting-picker" class="card flyout library" hidden>
+      <div class="card-head">
+        <h2>Setting metal</h2>
+        <button
+          class="bare"
+          data-close="setting-picker"
+          aria-label="Close setting editor"
+        >
+          <i data-icon="close"></i>
+        </button>
+      </div>
+      <div id="picked-metals" class="swatches"></div>
+      <span id="picked-metal-name"></span>
+      <button id="picked-styles" class="library-btn">
+        <i data-icon="grid"></i>Change ring style
+      </button>
+    </aside>
+    <section
+      id="try-panel"
+      hidden
+      role="dialog"
+      aria-label="Camera try-on"
+      aria-modal="true"
+    >
+      <div class="try-head">
+        <strong>Ring try-on</strong
+        ><button id="try-close" aria-label="Return to studio">Done</button>
+      </div>
+      <div class="try-controls">
+        <span id="try-status" role="status"></span>
+        <label id="try-fit" hidden
+          >Visual fit
+          <input
+            id="try-size"
+            type="range"
+            min="75"
+            max="125"
+            value="100"
+            aria-label="Visual ring fit"
+        /></label>
+        <button id="try-retry" hidden>Try again</button>
+      </div>
+    </section>
+    <aside class="card flyout top-panel" id="light-panel" hidden>
+      <div class="card-head">
+        <h2>Lighting</h2>
+        <button
+          class="bare"
+          data-close="light-panel"
+          aria-label="Close lighting"
+        >
+          <i data-icon="close"></i>
+        </button>
+      </div>
+      <div class="rig-list" id="rigs"></div>
+      <label class="slider-label" for="azimuth"
+        >Light rotation <output id="azimuth-v">0°</output></label
+      ><input
+        id="azimuth"
+        type="range"
+        min="-180"
+        max="180"
+        value="0"
+        step="1"
+      /><label class="slider-label" for="exposure"
+        >Exposure <output id="exposure-v">0.0 EV</output></label
+      ><input
+        id="exposure"
+        type="range"
+        min="-1.5"
+        max="1.5"
+        step=".05"
+        value="0"
+      />
+    </aside>
+    <aside class="card flyout top-panel" id="lens-panel" hidden>
+      <div class="card-head">
+        <h2>Camera</h2>
+        <button class="bare" data-close="lens-panel" aria-label="Close camera">
+          <i data-icon="close"></i>
+        </button>
+      </div>
+      <label class="slider-label" for="dof"
+        >Depth of field <output id="dof-v">Off</output></label
+      ><input id="dof" type="range" min="0" max="100" step="1" value="0" />
+      <label class="slider-label" for="sparkle"
+        >Sparkle <output id="sparkle-v">65%</output></label
+      >
+      <input id="sparkle" type="range" min="0" max="100" step="1" value="65" />
+      <div class="focus-line">
+        <small>Focus</small><span id="focus-label">Center stone</span>
+      </div>
+      <div class="action-pair">
+        <button id="pick-focus">Pick surface</button
+        ><button id="center-focus">Center stone</button>
+      </div>
+    </aside>
+    <aside
+      class="card flyout top-panel"
+      id="share-panel"
+      hidden
+      aria-labelledby="share-heading"
+    >
+      <div class="card-head">
+        <h2 id="share-heading">Share this ring</h2>
+        <button
+          class="bare"
+          data-close="share-panel"
+          aria-label="Close sharing"
+        >
+          <i data-icon="close"></i>
+        </button>
+      </div>
+      <div class="action-pair">
+        <button id="copy-design">Copy design link</button
+        ><button id="save-image">Save image</button>
+      </div>
+      <input id="share-url" aria-label="Design link" readonly hidden />
+      <small id="share-feedback" role="status"></small>
+    </aside>
+    <div class="object-label">
+      <button
+        id="share-toggle"
+        aria-controls="share-panel"
+        aria-expanded="false"
+        disabled
+      >
+        Share this ring <i data-icon="share"></i>
+      </button>
+      <h2 id="design-title">Lab-grown diamond trilogy</h2>
+      <span id="design-detail">Emerald cut · 14K yellow gold</span>
+      <small class="part-hint">Tap a stone or the band to edit</small>
+    </div>
+    <div class="dock" role="toolbar" aria-label="Stage controls">
+      <button id="mobile-edit" class="mobile-only" aria-label="Edit ring">
+        <i data-icon="adjust"></i>
+      </button>
+      <button
+        data-tool="orbit"
+        title="Orbit (O)"
+        aria-label="Orbit"
+        aria-pressed="true"
+      >
+        <i data-icon="orbit"></i><span>Orbit</span></button
+      ><button
+        data-tool="move"
+        title="Move ring (M)"
+        aria-label="Move ring"
+        aria-pressed="false"
+      >
+        <i data-icon="move"></i></button
+      ><button
+        data-tool="focus"
+        title="Pick focus (F)"
+        aria-label="Pick focus"
+        aria-pressed="false"
+      >
+        <i data-icon="focus"></i></button
+      ><em></em>
+      <button
+        id="spin"
+        title="Turntable (Space)"
+        aria-label="Turntable"
+        aria-pressed="false"
+      >
+        <i data-icon="play"></i></button
+      ><button id="zoom-out" title="Zoom out" aria-label="Zoom out">
+        <i data-icon="minus"></i></button
+      ><button id="zoom-in" title="Zoom in" aria-label="Zoom in">
+        <i data-icon="plus"></i></button
+      ><button id="home" title="Reset view (Home)" aria-label="Reset view">
+        <i data-icon="reset"></i>
+      </button>
+    </div>
+    <div class="status"><i></i><span id="perf">WebGL 2</span></div>
+    <div id="notice" role="status">Preparing the studio…</div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
