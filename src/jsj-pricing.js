@@ -13,7 +13,30 @@ export const PRICING = {
   minimum: 600,
   roundTo: 50,
   quoteUrl: "https://jsjewelry.online/about/",
+  // Current special. Set `special: null` to turn it off.
+  special: {
+    price: 1800,
+    label: "Special",
+    note: "Special: any 2 ct lab-grown diamond ring in 14K gold, any setting, all lab diamonds, $1,800.",
+    carats: 2,
+    stone: "lab-diamond",
+    metals: ["yellow-gold-14k", "white-gold-14k", "rose-gold-14k"],
+  },
 };
+
+// True when the design is a 2 ct, all-lab-diamond ring in 14K gold.
+export function onSpecial(studio) {
+  const sp = PRICING.special;
+  if (!sp || !studio) return false;
+  const s = studio.state;
+  if (s.center !== sp.stone || Math.abs(s.carats - sp.carats) > 0.001) return false;
+  if (!sp.metals.includes(s.metal)) return false;
+  for (const mesh of studio.stones ?? []) {
+    if (mesh.userData.role === "center") continue;
+    if ((studio.accentOverrides.get(mesh.name) ?? s.accent) !== sp.stone) return false;
+  }
+  return true;
+}
 
 export function priceRange(e) {
   if (!e || e.total == null) return null;

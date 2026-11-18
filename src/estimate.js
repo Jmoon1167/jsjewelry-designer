@@ -1,5 +1,5 @@
 import { estimate } from "./prices.js";
-import { PRICING, priceRange } from "./jsj-pricing.js";
+import { PRICING, priceRange, onSpecial } from "./jsj-pricing.js";
 import { designLink } from "./share.js";
 
 const el = (id) => document.getElementById(id);
@@ -52,11 +52,12 @@ function summary(studio) {
     name(lib.metals, s.metal),
   ].join(", ");
 }
-export function quoteLink(studio, range) {
+export function quoteLink(studio, range, special) {
   const url = new URL(PRICING.quoteUrl);
   url.searchParams.set("interest", "engagement");
   let piece = summary(studio);
-  if (range)
+  if (special) piece += " (special " + money.format(PRICING.special.price) + ")";
+  else if (range)
     piece +=
       " (designer estimate " +
       money.format(range[0]) +
@@ -75,13 +76,19 @@ export function updateEstimate(studio) {
     return;
   }
   const e = estimate(studio),
-    range = priceRange(e),
+    special = onSpecial(studio),
+    range = special ? [PRICING.special.price, PRICING.special.price] : priceRange(e),
     lib = studio.lib,
     s = studio.state;
+  const sp = PRICING.special;
+  el("estimate").classList.toggle("on-special", special);
+  el("estimate-label").textContent = special ? sp.label : "Starting at";
   el("estimate").setAttribute("aria-busy", "false");
-  el("price-range").textContent = range
-    ? money.format(range[0]) + " – " + money.format(range[1])
-    : "Quote on request";
+  el("price-range").textContent = special
+    ? money.format(sp.price)
+    : range
+      ? money.format(range[0]) + " – " + money.format(range[1])
+      : "Quote on request";
   if (e) {
     el("price-metal").textContent =
       lib.metals.find((m) => m.id === s.metal).name +
@@ -96,12 +103,16 @@ export function updateEstimate(studio) {
     el("price-accents").textContent =
       e.count + " stones · " + e.accentCarats.toFixed(2) + " ctw";
   }
-  el("price-note").textContent = range
-    ? ""
-    : "We price " +
+  el("price-note").textContent = special
+    ? sp.note
+    : sp && s.center === sp.stone
+      ? "Tip: " + sp.note.replace(/^Special: /, "")
+      : range
+        ? ""
+        : "We price " +
       (e?.missing.join(", ") || "this design") +
       " by hand. Request this ring for a quote.";
-  el("quote-link").href = quoteLink(studio, range);
+  el("quote-link").href = quoteLink(studio, range, special);
   const label = range ? money.format(range[0]) : "Quote";
   if (label === lastLabel && !loading) return;
   lastLabel = label;
@@ -109,8 +120,10 @@ export function updateEstimate(studio) {
   clearTimeout(timer);
   reels(label);
   timer = setTimeout(() => {
-    el("estimate-live").textContent = range
-      ? "Starting at " + label
+    el("estimate-live").textContent = special
+      ? "Special price " + label
+      : range
+        ? "Starting at " + label
       : "Price on request";
   }, 380);
 }
